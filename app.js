@@ -33,4 +33,5 @@ mongoose.connect('mongodb+srv://Adamsiksik:ebaa2009@cluster0.an1q8.mongodb.net/P
   console.log("connected")
   );
 
+  // obada 
 app.listen(3000);
