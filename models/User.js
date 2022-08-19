@@ -1,12 +1,11 @@
-var mongoose = require('mongoose');
-const book = require('../models/Book');
-
+var mongoose = require("mongoose");
+const book = require("../models/Book");
+// in liked why use string not relations ( relations is the correct way )
 const UserSchema = mongoose.Schema({
   Email: {
     type: String,
     require: true,
-    unique: true
-    
+    unique: true,
   },
   Password: {
     type: String,
@@ -19,23 +18,31 @@ const UserSchema = mongoose.Schema({
   DoB: {
     type: String,
     require: true,
-  }
-  , genre: [{
-    type: String,
-  }],
-  gender: {
-    type: String
   },
-  liked: [{
+  genre: [
+    {
+      type: String,
+    },
+  ],
+  gender: {
     type: String,
-  }],
-  later: [{
-    type: String,
-  }],
-  history: [{
-    type: String,
-    unique: true
-  }]
-})
+  },
+  liked: [
+    {
+      type: String,
+    },
+  ],
+  later: [
+    {
+      type: String,
+    },
+  ],
+  history: [
+    {
+      type: String,
+      unique: true,
+    },
+  ],
+});
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model("User", UserSchema);

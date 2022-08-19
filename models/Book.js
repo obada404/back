@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
-
+var mongoose = require("mongoose");
+// use consistent naming either using string or classes
 const BookSchema = mongoose.Schema({
   ISBN: {
     type: String,
     require: true,
-    unique :true,
+    unique: true,
   },
   Publisher: {
     type: String,
@@ -12,11 +12,9 @@ const BookSchema = mongoose.Schema({
   },
   catogery: {
     type: String,
-
   },
   Numberoflike: {
     type: String,
-
   },
   "Book-Author": {
     type: String,
@@ -30,5 +28,5 @@ const BookSchema = mongoose.Schema({
   "Image-URL-L": {
     type: String,
   },
-})
-module.exports = mongoose.model('Book', BookSchema)
+});
+module.exports = mongoose.model("Book", BookSchema);
